@@ -1,5 +1,6 @@
 <?php
-require_once(dirname(__FILE__)."/aws/autoloader.php");
+
+require_once(dirname(__FILE__) . "/../vendor/autoload.php"); // Autoload files using Composer autoload
 
 class SpacesConnect {
   /*

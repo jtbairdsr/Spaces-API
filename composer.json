@@ -18,8 +18,9 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-0": {
-            "SpacesConnect": "src/"
-        }
+        "files": ["src/spaces.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6"
     }
 }
