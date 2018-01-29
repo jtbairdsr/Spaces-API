@@ -1,7 +1,5 @@
 <?php
 
-require_once(dirname(__FILE__) . "/../vendor/autoload.php"); // Autoload files using Composer autoload
-
 class SpacesConnect {
   /*
   An API wrapper for AWS, makes working with DigitalOcean's Spaces super easy.
