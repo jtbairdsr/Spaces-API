@@ -1,9 +1,14 @@
 # Spaces-API
-An API wrapper for DigitalOcean's Spaces object storage designed for easy use. 
+An API wrapper for DigitalOcean's Spaces object storage designed for easy use.
+
+## Installation
+```sh
+> composer require jtbairdsr/spaces-api @dev
+```
 
 ### Connecting
 ```php
-require_once("spaces.php");
+require_once 'vendor/autoload.php';
 
 $key = "EXAMPLE_KEY";
 $secret = "EXAMPLE_SECRET";
@@ -14,7 +19,7 @@ $region = "nyc3";
 $space = new SpacesConnect($key, $secret, $space_name, $region);
 ```
 
-All available options: 
+All available options:
 ###### SpacesConnect(REQUIRED KEY, REQUIRED SECRET, OPTIONAL SPACE's NAME, OPTIONAL REGION, OPTIONAL HOST);
 
 
@@ -35,7 +40,7 @@ $save_as = "folder/downloaded-image.png";
 
 $space->downloadFile($download_file, $save_as);
 ```
-All available options: 
+All available options:
 ###### uploadFile(REQUIRED PATH TO FILE, OPTIONAL PRIVACY (public|private) OPTIONAL NAME TO SAVE FILE AS);
 ###### downloadFile(REQUIRED FILE TO DOWNLOAD, REQUIRED LOCATION TO SAVE IN);
 
@@ -52,7 +57,7 @@ $space->makePublic($file);
 $space->makePrivate($file);
 
 ```
-All available options: 
+All available options:
 ###### makePublic(REQUIRED PATH TO FILE);
 ###### makePrivate(REQUIRED PATH TO FILE);
 
@@ -68,7 +73,7 @@ $valid_for = "1 day";
 
 $link = $space->CreateTemporaryURL($file, $valid_for);
 ```
-All available options: 
+All available options:
 ###### CreateTemporaryURL(REQUIRED FILE NAME, OPTIONAL TIME LINK IS VALID FOR);
 
 
@@ -123,7 +128,7 @@ $new_space = "my-new-space";
 
 $space->createSpace($new_space);
 ```
-All available options: 
+All available options:
 ###### createSpace(REQUIRED SPACE NAME, OPTIONAL REGION FOR SPACE);
 
 
@@ -135,7 +140,7 @@ $new_space = "my-new-space";
 
 $space->setSpace($new_space);
 ```
-All available options: 
+All available options:
 ###### setSpace(REQUIRED SPACE NAME, OPTIONAL REGION FOR SPACE, OPTIONAL HOST);
 
 
